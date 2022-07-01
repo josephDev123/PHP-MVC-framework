@@ -1,0 +1,17 @@
+{
+    "name": "phpframework/uzuegbujoseph",
+    "description": "php framework using MVC structure",
+    "authors": [
+        {
+            "name": "uzuegbu joseph",
+            "email": "josephuzuegbu55@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "require": {}
+}
