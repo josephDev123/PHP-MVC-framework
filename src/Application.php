@@ -10,10 +10,16 @@ class Application{
 
     public string $rootDir;
 
+    public View $view;
+
+
     public function __construct($rootPath){
         $this->request= new Request();
         $this->router= new Router($this->request);
         $this->rootDir =$rootPath;
+        self::$app = $this;
+        $this->view = new View();
+
     }
 
    public function Run(){

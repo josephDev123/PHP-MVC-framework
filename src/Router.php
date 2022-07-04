@@ -29,17 +29,18 @@ class Router{
    
     
      if($callback === false){
-        return $this->response->HandleErrorStatusCode(404);
+      $this->response->HandleErrorStatusCode(404);
+      return $this->view->renderView('404');
+    
+
          // throw new \Exception("no callback for the route");
      }
 
      if(is_string($callback)){
-       return $this->view->renderView($callback);
+       return Application::$app->view->renderView($callback);
      }
 
     return call_user_func($callback);
-     
-
     }
 
 }
