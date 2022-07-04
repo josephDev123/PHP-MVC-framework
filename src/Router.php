@@ -31,13 +31,18 @@ class Router{
      if($callback === false){
       $this->response->HandleErrorStatusCode(404);
       return $this->view->renderView('404');
-    
-
-         // throw new \Exception("no callback for the route");
+        
      }
 
      if(is_string($callback)){
        return Application::$app->view->renderView($callback);
+     }
+
+     if (is_array($callback)) {
+       $controller = new $callback[0];
+       $controller->action  = $callback[1];
+
+       $callback[0] = $controller;
      }
 
     return call_user_func($callback);
