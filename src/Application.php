@@ -1,7 +1,7 @@
 <?php
 
-namespace App\src;
-use App\src;
+namespace App\core;
+// use App\core;
 
 class Application{
     public Router $router;

@@ -1,7 +1,6 @@
 <?php
 
-namespace App\src;
-
+namespace App\core;
 
 class Router{
    public array $route = [];
@@ -22,6 +21,7 @@ class Router{
 
     //resolve the route
     public function resolve(){
+      
      $method = $this->request->requestMethod();
      $url = $this->request->url();
    
@@ -39,13 +39,20 @@ class Router{
      }
 
      if (is_array($callback)) {
-       $controller = new $callback[0];
-       $controller->action  = $callback[1];
-
-       $callback[0] = $controller;
+       $callback[0] = new $callback[0];
+       
+      //  $controller->action  = $callback[1];
+        
+      //  $callback[0] = $controller;
      }
+     
+    
+      echo '<pre>';
+        var_dump($callback);
+     echo  '</pre>';
 
     return call_user_func($callback);
+
     }
 
 }
