@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '0df8e0fa4f85cd9385293c20eb5d1966d7b58d1f',
+    'reference' => 'd7f04672b370033cf197bdc6c399c37fcdf8edc8',
     'name' => 'phpframework/uzuegbujoseph',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '0df8e0fa4f85cd9385293c20eb5d1966d7b58d1f',
+      'reference' => 'd7f04672b370033cf197bdc6c399c37fcdf8edc8',
     ),
   ),
 );

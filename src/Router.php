@@ -1,6 +1,6 @@
 <?php
 
-namespace App\core;
+namespace App\src;
 
 class Router{
    public array $route = [];
@@ -47,9 +47,9 @@ class Router{
      }
      
     
-      echo '<pre>';
-        var_dump($callback);
-     echo  '</pre>';
+   //    echo '<pre>';
+   //      var_dump($callback);
+   //   echo  '</pre>';
 
     return call_user_func($callback);
 

@@ -1,1 +1,4 @@
-<div class="container"><h4>Home page</h4></div>
+<div class="container">
+    <h1>Home page</h1>
+    <?php echo $key; ?>
+</div>

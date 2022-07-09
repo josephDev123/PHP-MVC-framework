@@ -1,18 +1,18 @@
 <?php
 
-namespace App\controller;
-// use App\src\Application;
+namespace App\src\controller;
+use App\src\Application;
 
 class AboutController{
 
     public function home(){
-        // return Application::$app->view->renderView('home');
+        
+        return Application::$app->view->renderView('home', ['greet'=>'hello world']);
     }
 
-    public function index(){
-
+    public function contact(){
         // return Application::$app->view->renderView('contact');
-        return 'index';
+      
     }
 
 }
