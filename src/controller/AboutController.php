@@ -11,7 +11,15 @@ class AboutController{
     }
 
     public function contact(){
-        // return Application::$app->view->renderView('contact');
+        return Application::$app->view->renderView('contact', []);
+      
+    }
+
+    public function store(){
+        echo '<pre>';
+        var_dump($_REQUEST);
+        echo '</pre>';
+  
       
     }
 

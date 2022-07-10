@@ -19,6 +19,10 @@ class Router{
        $this->route['get'][$route] = $callable;
     }
 
+    public function post($route, $callable){
+      $this->route['post'][$route] = $callable;
+   }
+
     //resolve the route
     public function resolve(){
       
@@ -30,19 +34,16 @@ class Router{
     
      if($callback === false){
       $this->response->HandleErrorStatusCode(404);
-      return $this->view->renderView('404');
-        
+      return $this->view->renderView('404', []);  
      }
 
      if(is_string($callback)){
-       return Application::$app->view->renderView($callback);
+       return Application::$app->view->renderView($callback, []);
      }
 
      if (is_array($callback)) {
        $callback[0] = new $callback[0];
-       
       //  $controller->action  = $callback[1];
-        
       //  $callback[0] = $controller;
      }
      
