@@ -3,21 +3,21 @@
 namespace App\src\controller;
 use App\src\Application;
 
-class AboutController{
+class AboutController extends Controller{
 
     public function home(){
-        
-        return Application::$app->view->renderView('home', ['greet'=>'hello world']);
+       return $this->Render('home',  ['greet'=>'hello world']);
+        // return Application::$app->view->renderView(,);
     }
 
     public function contact(){
-        return Application::$app->view->renderView('contact', []);
+        return $this->Render('contact',  []);
       
     }
 
     public function store(){
         echo '<pre>';
-        var_dump($_REQUEST);
+        var_dump(Application::$app->request->getRequestBody());
         echo '</pre>';
   
       

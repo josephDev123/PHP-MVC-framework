@@ -11,4 +11,17 @@ class Request{
     public function url(){
        return $_SERVER['REQUEST_URI'];
     }
+
+
+
+    // get the data that is posted by form
+    public function getRequestBody(){
+     $result = [];
+      foreach($_POST as $requestData => $value){
+        $sanitised = htmlspecialchars($value);
+       $result[$requestData] = $sanitised;
+
+      }
+        return $result;
+    }
 }

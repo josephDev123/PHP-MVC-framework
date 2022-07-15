@@ -1,6 +1,6 @@
 
-    <div class="container"> -->
-        <h1>Contact page!</h1>
+    <div class="container"> 
+        <h1>Contact page</h1>
         <form method="POST" action="/contact">
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject </label>
