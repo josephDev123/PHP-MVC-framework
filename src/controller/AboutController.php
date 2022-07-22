@@ -1,13 +1,12 @@
 <?php
 
 namespace App\src\controller;
-use App\src\Application;
+use App\src\Request;
 
 class AboutController extends Controller{
 
     public function home(){
-       return $this->Render('home',  ['greet'=>'hello world']);
-        // return Application::$app->view->renderView(,);
+       return $this->Render('home',  ['greet'=>'hello world']); 
     }
 
     public function contact(){
@@ -15,9 +14,9 @@ class AboutController extends Controller{
       
     }
 
-    public function store(){
+    public function store(Request $request){
         echo '<pre>';
-        var_dump(Application::$app->request->getRequestBody());
+        var_dump($request->getRequestBody());
         echo '</pre>';
   
       

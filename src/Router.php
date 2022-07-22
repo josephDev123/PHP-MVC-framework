@@ -8,7 +8,7 @@ class Router{
    public Response $response;
    public View $view;
 
-   public function __construct($request){
+   public function __construct(Request $request){
       $this->request = $request;
       $this->response = new Response;
       $this->view = new View;
@@ -38,7 +38,8 @@ class Router{
      }
 
      if(is_string($callback)){
-       return Application::$app->view->renderView($callback, []);
+      //  return Application::$app->view->renderView($callback, []);
+      $this->view->renderView($callback, []);
      }
 
      if (is_array($callback)) {
@@ -52,7 +53,7 @@ class Router{
    //      var_dump($callback);
    //   echo  '</pre>';
 
-    return call_user_func($callback);
+    return call_user_func($callback, $this->request);
 
     }
 
