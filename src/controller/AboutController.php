@@ -5,6 +5,7 @@ use App\src\Request;
 
 class AboutController extends Controller{
 
+
     public function home(){
        return $this->Render('home',  ['greet'=>'hello world']); 
     }
@@ -17,9 +18,9 @@ class AboutController extends Controller{
     public function store(Request $request){
         echo '<pre>';
         var_dump($request->getRequestBody());
-        echo '</pre>';
-  
-      
+        echo '</pre>'; 
     }
+
+    
 
 }

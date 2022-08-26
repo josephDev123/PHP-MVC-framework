@@ -26,10 +26,10 @@ class Router{
     //resolve the route
     public function resolve(){
       
-     $method = $this->request->requestMethod();
+     $req_method = $this->request->requestMethod();
      $url = $this->request->url();
    
-     $callback = $this->route[$method][$url] ?? false;
+     $callback = $this->route[$req_method][$url] ?? false;
    
     
      if($callback === false){
@@ -44,8 +44,6 @@ class Router{
 
      if (is_array($callback)) {
        $callback[0] = new $callback[0];
-      //  $controller->action  = $callback[1];
-      //  $callback[0] = $controller;
      }
      
     

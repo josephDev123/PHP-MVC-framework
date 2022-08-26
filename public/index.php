@@ -8,7 +8,6 @@ use App\src\controller\AboutController;
 use App\src\Request;
 
 $app = new Application(dirname( __DIR__));
-$request = new Request();
 
 
 $app->router->get('/', [AboutController::class, 'home']);

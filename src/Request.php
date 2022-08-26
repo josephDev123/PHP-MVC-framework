@@ -9,7 +9,12 @@ class Request{
     }
 
     public function url(){
+      // $this->getQuery();
        return $_SERVER['REQUEST_URI'];
+    }
+
+    public function getQuery($urlParam){
+      return $urlParam;
     }
 
 
